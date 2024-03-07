@@ -16,9 +16,9 @@ namespace ConsoleApp2
 
             int minValue = 1;
             int maxValue = 10;
-            int lineArraySum = 0;
+            int lineSum = 0;
             int columArrayMultiple = 1;
-            int lineArray = 1;
+            int lineIndex = 1;
             int columArray = 0;
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -31,9 +31,10 @@ namespace ConsoleApp2
 
                 Console.WriteLine();
             }
+            
             for (int i = 0; i < array.GetLength(1); i++)
             {
-                lineArraySum += array[lineArray, i];
+                lineSum += array[lineIndex, i];
             }
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -41,7 +42,7 @@ namespace ConsoleApp2
                 columArrayMultiple *= array[i, columArray];
             }
 
-            Console.WriteLine($"Сумма строки {lineArray + 1} равна:{lineArraySum}\n" +
+            Console.WriteLine($"Сумма строки {lineIndex + 1} равна:{lineSum}\n" +
                 $"Произведение солбца {columArray + 1} равен:{columArrayMultiple}");
         }
     }
